@@ -1,0 +1,19 @@
+{% extends 'index.html' %}
+
+{% block Nagesh %}
+
+<form method="post">
+	{% csrf_token %}
+	<table border="1" align="center" width="300" cellspacing="0"> 
+		<tr><th colspan="6" style="text-align: center">Delete Details</th></tr>
+		<tr><th>{{object.e_id}}</th></tr>
+		<tr><th>{{object.e_name}}</th></tr>
+		<tr><th>{{object.e_contact}}</th></tr>
+		<tr><th>{{object.e_salary}}</th></tr>
+
+		<form method="post">
+		<tr><th colspan="2" style="text-align: center"><button>Delete</button></th></tr>
+		</form>
+	</table>
+</form>
+{% endblock %}
